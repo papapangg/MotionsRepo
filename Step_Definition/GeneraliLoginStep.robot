@@ -7,6 +7,7 @@ Library             OperatingSystem
 
 *** Keywords ***
 Login_Happy_Path
+    [Arguments]     ${Generali_Username} 
     Input Text      ${UsernameField}      ${Generali_Username}
     Input Text      ${PasswordField}      ${Password}
     Scroll Element Into View    ${LoginButton}
@@ -23,14 +24,14 @@ Login_Negative_Path
     Click Button    ${LoginButton}
 
 Logout_Generali
-    [Arguments]               ${Gen_Profile}
+    [Arguments]     ${Logout_Ausloggen}
     Wait Until Page Contains Element    ${Gen_Profile}
     Mouse Over                ${Gen_Profile}
     Wait Until Element Is Visible     ${Logout_Ausloggen}
     Click Element             ${Logout_Ausloggen}
 
 Forgot_Password_HappyPath
-    [Arguments]               ${ForgotPasswordLink}
+    [Arguments]     ${EmailResetNotification}
     Execute JavaScript    window.scrollTo(0, document.body.scrollHeight)
     Wait Until Page Contains Element    ${ForgotPasswordLink}
     Click Element                       ${ForgotPasswordLink}
@@ -40,7 +41,7 @@ Forgot_Password_HappyPath
     Wait Until Element Is Visible       ${EmailResetNotification}
 
 Forgot_Password_NegativePath
-    [Arguments]               ${ForgotPasswordLink}
+    [Arguments]     ${SendNewPasswordLink}
     Execute JavaScript    window.scrollTo(0, document.body.scrollHeight)
     Wait Until Page Contains Element    ${ForgotPasswordLink}
     Click Element                       ${ForgotPasswordLink}
