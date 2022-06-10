@@ -1,0 +1,1 @@
+robot --variable BROWSER:Chrome --outputdir ../Reports Test_login.robot
