@@ -17,3 +17,8 @@ Dashboard_DataSearch
     Navigate_to_Landing_Page    GeneraliCredentials
     Login_Happy_Path            ${Generali_Username}
     TC_01_DataSearch
+
+Dashboard_Sort_Claim_Data
+    Navigate_to_Landing_Page    GeneraliCredentials
+    Login_Happy_Path            ${Generali_Username}
+    TC_02_SortClaimData
